@@ -1,13 +1,236 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+label {
+    font-size: 1.2rem;
+    color: #656262;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.loginPage,
+.signupPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* background: linear-gradient(90deg,
+            rgb(151, 151, 155) 0%,
+            rgb(149, 138, 183) 35%,
+            rgb(130, 111, 186)100%); */
+    background: linear-gradient(90deg,
+            rgb(244, 244, 244) 0%,
+            rgb(159, 151, 184) 35%,
+            rgb(161, 138, 231)100%);
+
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.heading {
+    font-size: 50px;
+    color: white;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 40px;
+    background-color: rgb(136, 105, 228);
+    border-radius: 8px;
+    margin-bottom: 100px;
+    font-family: "McLaren", cursive;
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1)
+}
+
+.tagline {
+    font-size: 13px;
+    text-align: center;
+    color: white;
+    font-family: "McLaren", cursive;
+}
+
+
+header {
+    /* background-color: #f5ba13; */
+    background-color: rgb(136, 105, 228);
+    margin: auto -16px;
+    padding: 16px 32px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1,
+header p {
+    color: #fff;
+    font-family: "McLaren", cursive;
+    font-weight: 200;
+}
+
+header p {
+
+    font-size: 25px;
+}
+
+.logoutbtn {
+    border: none;
+    color: white;
+    background-color: rgb(136, 105, 228);
+    font-size: 20px;
+    font-family: "McLaren", cursive;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+footer p {
+    color: #ccc;
+}
+
+.note {
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 2px 15px rgb(136, 105, 228);
+    padding: 10px;
+    width: 240px;
+    margin: 16px;
+    float: left;
+}
+
+.note h1 {
+    font-size: 1.1em;
+    margin-bottom: 6px;
+}
+
+.note p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.note button {
+    position: relative;
+    float: right;
+    margin-right: 10px;
+    color: rgb(136, 105, 228);
+    border: none;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    outline: none;
+}
+
+form.create-note {
+    position: relative;
+    width: 480px;
+    margin: 30px auto 20px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 7px;
+    box-shadow: 0 1px 5px rgb(136, 105, 228);
+}
+
+form.create-note input,
+form.create-note textarea {
+    width: 100%;
+    border: none;
+    padding: 4px;
+    outline: none;
+    font-size: 1.2em;
+    font-family: inherit;
+    resize: none;
+}
+
+form.create-note button {
+    position: absolute;
+    right: 18px;
+    bottom: -18px;
+    background: rgb(136, 105, 228);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    outline: none;
+}
+
+.form_container {
+    background-color: #ffffff4d;
+    padding: 2rem 3rem;
+    border-radius: 0.5rem;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+
+.form_container>h2 {
+    margin-block: 1rem;
+    padding-block: 0.6rem;
+    color: rgb(136, 105, 228);
+    font-weight: bold;
+    text-align: center;
+}
+
+.form_container>form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.form_container div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.form_container input {
+    border: none;
+    padding: 0.5rem;
+    border-bottom: 1px solid gray;
+    font-size: 1.1rem;
+    outline: none;
+    background-color: #ffffff4d
+}
+
+.form_container input::placeholder {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.form_container button {
+    background-color: rgb(136, 105, 228);
+    color: #fff;
+    border: none;
+    padding: 0.6rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0.3rem;
+}
+
+span a {
+    text-decoration: none;
+    color: rgb(136, 105, 228);
 }
